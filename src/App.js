@@ -18,6 +18,14 @@ import {
   Wrap,
   StarIcon,
   WrapItem,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 // 1. Import
@@ -25,25 +33,27 @@ import { Icon } from "@chakra-ui/react";
 import { BiRadio } from "react-icons/bi";
 
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const radios = {
-    nombre: "La 100",
-    dial: "99.9",
-    streamId: "",
+    nombre: "Aspen",
+    dial: "102.3",
+    streamId: "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio",
   };
 
   return (
     <ChakraProvider theme={theme}>
       {/* *************** HEADER ***********************/}
 
-      <Flex justify="space-around">
+      <Flex justify="space-around" boxShadow="md" p="2" rounded="md">
         <Center p="2">
-          <Heading fontSize="3xl">
-            <Icon as={BiRadio} mr="10px" />
+          <Heading fontSize="3xl" textTransform="uppercase">
+            <Icon as={BiRadio} mr="10px" mb="8px" fontSize="35px" />
             Radios de Argentina
           </Heading>
         </Center>
         <Spacer />
-        <Center pt="1.5">
+        <Center>
           <Menu>
             <MenuButton as={Button} variant="outline">
               Menú
@@ -58,38 +68,74 @@ function App() {
         </Center>
       </Flex>
       {/* ***************SECTION TOP RADIOS ***********************/}
-      <Heading fontSize="xl" mt="1.5" ml="2.5">
+      <Heading fontSize="md" mt="1.5" ml="5" textTransform="uppercase">
         Top radios
       </Heading>
-      <Flex h="90vh" justifyContent="center" mt="1rem" bg="whiteAlpha.500">
-        <Wrap alignSelf="center" spacing="1rem">
+      <Flex h="50vh" justifyContent="center" mt="1rem" bg="whiteAlpha.500">
+        <Wrap mt="2rem" spacing="1rem">
           <WrapItem>
             <Box
               maxW="md"
-              borderTopWidth="2px"
+              w="275px"
+              h="250px"
+              borderTopWidth="5px"
               borderTopColor="red"
               borderRadius="lg"
               overflow="hidden"
+              boxShadow="md"
+              p="2"
+              rounded="md"
             >
               <Box p="6">
-                <Image
-                  src="/public/logo192.png"
-                  alt="logo de radio"
-                  fallbackSrc="https://via.placeholder.com/150"
-                />
-                <Heading fontSize="sm" mt="5px">
-                  {radios.nombre}
+                <Center>
+                  <Image
+                    onClick={onOpen}
+                    mt="1.5rem"
+                    w="100px"
+                    h="100px"
+                    borderRadius="5px"
+                    src="aspen.png"
+                    alt="logo de radio"
+                    fallbackSrc="https://via.placeholder.com/150"
+                  />
+
+                  <Modal
+                    isOpen={isOpen}
+                    onClose={onClose}
+                    closeOnOverlayClick={false}
+                  >
+                    <ModalOverlay />
+                    <ModalContent>
+                      <Center>
+                        <ModalHeader fontSize="md">
+                          {radios.nombre}&bull;{radios.dial}
+                        </ModalHeader>
+                      </Center>
+                      <ModalCloseButton />
+                      <ModalBody>
+                        <Center>
+                          <Image
+                            w="100px"
+                            h="100px"
+                            borderRadius="5px"
+                            src="aspen.png"
+                            alt="logo de radio"
+                          />
+                        </Center>
+                      </ModalBody>
+                      <ModalFooter>
+                        <Button colorScheme="blue" mr={3} onClick={onClose}>
+                          Cerrar
+                        </Button>
+                      </ModalFooter>
+                    </ModalContent>
+                  </Modal>
+                </Center>
+                <Heading fontSize="md" mt="10px">
+                  <Center>
+                    {radios.nombre} &bull; {radios.dial}
+                  </Center>
                 </Heading>
-                <Box d="flex" alignItems="baseline">
-                  <Box
-                    color="grey"
-                    fontWeight="semibold"
-                    letterSpacing="wide"
-                    fontSize="xs"
-                    textTransform="uppercase"
-                    ml="2"
-                  ></Box>
-                </Box>
               </Box>
             </Box>
           </WrapItem>
