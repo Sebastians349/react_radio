@@ -16,6 +16,7 @@ import {
   Badge,
   Box,
   Wrap,
+  Icon,
   StarIcon,
   WrapItem,
   Modal,
@@ -28,9 +29,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
-// 1. Import
-import { Icon } from "@chakra-ui/react";
-import { BiRadio } from "react-icons/bi";
+import { BiRadio, BiPlayCircle } from "react-icons/bi";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -71,7 +70,7 @@ function App() {
       <Heading fontSize="md" mt="1.5" ml="5" textTransform="uppercase">
         Top radios
       </Heading>
-      <Flex h="50vh" justifyContent="center" mt="1rem" bg="whiteAlpha.500">
+      <Flex h="50vh" justifyContent="center" mt="1rem">
         <Wrap mt="2rem" spacing="1rem">
           <WrapItem>
             <Box
@@ -114,20 +113,27 @@ function App() {
                       <ModalCloseButton />
                       <ModalBody>
                         <Center>
-                          <Image
+                          {/* <Image
                             w="100px"
                             h="100px"
                             borderRadius="5px"
                             src="aspen.png"
                             alt="logo de radio"
-                          />
+                          /> */}
+                          <Icon
+                            as={BiPlayCircle}
+                            fontSize="4rem"
+                            variant="outline"
+                          ></Icon>
                         </Center>
                       </ModalBody>
-                      <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                          Cerrar
-                        </Button>
-                      </ModalFooter>
+                      <Center>
+                        <ModalFooter>
+                          <Button colorScheme="blue" mr={3} onClick={onClose}>
+                            Cerrar
+                          </Button>
+                        </ModalFooter>
+                      </Center>
                     </ModalContent>
                   </Modal>
                 </Center>
@@ -143,7 +149,7 @@ function App() {
       </Flex>
       {/* ***************SECTION Listado RADIOS ***********************/}
 
-      <Flex bg="yellow.200" h="100vh"></Flex>
+      <Flex h="100vh"></Flex>
     </ChakraProvider>
   );
 }
