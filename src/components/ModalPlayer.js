@@ -1,5 +1,5 @@
 import React from "react";
-import { BiRadio, BiPlayCircle } from "react-icons/bi";
+import { BiPlayCircle } from "react-icons/bi";
 import {
   Modal,
   ModalOverlay,
@@ -15,28 +15,18 @@ import {
 } from "@chakra-ui/react";
 
 function ModalPlayer(props) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onClose } = useDisclosure();
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
       <ModalOverlay />
       <ModalContent>
         <Center>
-          <ModalHeader fontSize="md">
-            {/*             {radios.nombre}&bull;{radios.dial}
-             */}{" "}
-          </ModalHeader>
+          <ModalHeader fontSize="md"></ModalHeader>
         </Center>
         <ModalCloseButton />
         <ModalBody>
           <Center>
-            {/* <Image
-        w="100px"
-        h="100px"
-        borderRadius="5px"
-        src="aspen.png"
-        alt="logo de radio"
-      /> */}
             <Icon as={BiPlayCircle} fontSize="4rem" variant="outline"></Icon>
           </Center>
         </ModalBody>
