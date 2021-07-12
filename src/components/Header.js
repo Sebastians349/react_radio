@@ -10,9 +10,12 @@ import {
   Button,
   Heading,
   Icon,
+  Link,
 } from "@chakra-ui/react";
 import { BiRadio } from "react-icons/bi";
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import RadioGroupList from "./RadioGroupList";
+
 const Header = () => {
   return (
     <Flex justify="space-around" boxShadow="md" p="2" rounded="md">
@@ -29,7 +32,11 @@ const Header = () => {
             Menú
           </MenuButton>
           <MenuList>
-            <MenuItem>Listado de radios</MenuItem>
+            <MenuItem>
+              <Link href={RadioGroupList} isInternal>
+                Listado de radios
+              </Link>
+            </MenuItem>
             <MenuItem>Comentarios</MenuItem>
             <MenuItem>Contacto</MenuItem>
           </MenuList>

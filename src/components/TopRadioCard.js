@@ -40,43 +40,39 @@ const TopRadioCard = (props) => {
   ];
   return (
     <Flex h="50vh" justifyContent="center" mt="1rem">
-      <Wrap>
-        <WrapItem>
-          <Box
-            maxW="md"
-            w="275px"
-            h="250px"
-            borderTopWidth="5px"
-            borderTopColor="red"
-            borderRadius="lg"
-            overflow="hidden"
-            boxShadow="md"
-            p="2"
-            rounded="md"
-          >
-            <Box p="6">
-              <Center>
-                <Image
-                  onClick={onOpen}
-                  mt="1.5rem"
-                  w="100px"
-                  h="100px"
-                  borderRadius="5px"
-                  src="aspen.png"
-                  alt="logo de radio"
-                  fallbackSrc="https://via.placeholder.com/150"
-                />
-                <ModalPlayer /> {/* linkear no hace nada */}
-              </Center>
-              <Heading fontSize="md" mt="10px">
-                <Center>
-                  {radios[0].nombre} &bull; {radios[0].dial}
-                </Center>
-              </Heading>
-            </Box>
-          </Box>
-        </WrapItem>
-      </Wrap>
+      <Box
+        maxW="md"
+        w="275px"
+        h="250px"
+        borderTopWidth="5px"
+        borderTopColor="red"
+        borderRadius="lg"
+        overflow="hidden"
+        boxShadow="md"
+        p="2"
+        rounded="md"
+      >
+        <Box p="6">
+          <Center>
+            <Image
+              onClick={onOpen}
+              mt="1.5rem"
+              w="100px"
+              h="100px"
+              borderRadius="5px"
+              src="aspen.png"
+              alt="logo de radio"
+              fallbackSrc="https://via.placeholder.com/150"
+            />
+            <ModalPlayer /> {/* linkear no hace nada */}
+          </Center>
+          <Heading fontSize="md" mt="10px">
+            <Center>
+              {radios[0].nombre} &bull; {radios[0].dial}
+            </Center>
+          </Heading>
+        </Box>
+      </Box>
     </Flex>
   );
 };
