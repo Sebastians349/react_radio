@@ -37,7 +37,7 @@ const TopRadioCard = (props) => {
     },
   ];
   return (
-    <Flex h="50vh" justifyContent="center" mt="1rem">
+    <Flex justifyContent="center" mt="1rem">
       <Box
         maxW="md"
         w="275px"

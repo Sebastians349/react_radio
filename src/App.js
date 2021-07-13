@@ -7,6 +7,7 @@ import RadioGroupList from "./components/RadioGroupList";
 import CommentSection from "./components/CommentSection";
 import AdsBanner from "./components/AdsBanner";
 import BackTopIcon from "./components/BackTopIcon";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <CommentSection />
       <BackTopIcon />
       <AdsBanner />
+      <Footer />
     </ChakraProvider>
   );
 }
