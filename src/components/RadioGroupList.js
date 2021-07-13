@@ -3,7 +3,7 @@ import { SimpleGrid } from "@chakra-ui/react";
 import RadioCardSm from "./RadioCardSm";
 const RadioGroupList = () => {
   return (
-    <SimpleGrid minChildWidth="150px" spacing="1">
+    <SimpleGrid minChildWidth="150px" spacing="10px">
       <RadioCardSm />
       <RadioCardSm />
       <RadioCardSm />

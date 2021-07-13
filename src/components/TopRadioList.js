@@ -4,7 +4,7 @@ import { SimpleGrid } from "@chakra-ui/react";
 
 const TopRadioList = () => {
   return (
-    <SimpleGrid minChildWidth="275px" spacing="20px">
+    <SimpleGrid minChildWidth="275px" spacing="20px" spacingY="0.1">
       <TopRadioCard />
       <TopRadioCard />
       <TopRadioCard />

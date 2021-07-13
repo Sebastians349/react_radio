@@ -4,7 +4,7 @@ import ModalPlayer from "./ModalPlayer";
 
 const RadioCardSm = (props) => {
   return (
-    <Flex h="100vh" justifyContent="center" mt="1rem">
+    <Flex justifyContent="center" mt="1rem">
       <Box
         maxW="md"
         w="150px"
@@ -28,7 +28,10 @@ const RadioCardSm = (props) => {
               fallbackSrc="https://via.placeholder.com/150"
             />
           </Center>
-          <Heading fontSize="md" mt="10px"></Heading>
+          <Heading fontSize="md" mt="10px">
+            {/*             {radios[0].nombre} &bull; {radios[0].dial}
+             */}{" "}
+          </Heading>
         </Box>
       </Box>
     </Flex>

@@ -5,8 +5,6 @@ import {
   Heading,
   Image,
   Box,
-  Wrap,
-  WrapItem,
   useDisclosure,
 } from "@chakra-ui/react";
 import ModalPlayer from "./ModalPlayer";

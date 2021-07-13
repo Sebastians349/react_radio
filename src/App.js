@@ -4,16 +4,38 @@ import { ChakraProvider, theme, Heading } from "@chakra-ui/react";
 import Header from "./components/Header";
 import TopRadioList from "./components/TopRadioList";
 import RadioGroupList from "./components/RadioGroupList";
+import CommentSection from "./components/CommentSection";
+import AdsBanner from "./components/AdsBanner";
+import BackTopIcon from "./components/BackTopIcon";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Heading fontSize="md" mt="25" ml="5" textTransform="uppercase">
+      <Heading
+        fontSize="md"
+        mt="25"
+        ml="3"
+        textTransform="uppercase"
+        fontWeight="md"
+      >
         Top radios
       </Heading>
       <TopRadioList />
+      <AdsBanner />
+      <Heading
+        fontSize="md"
+        mt="25"
+        ml="3"
+        textTransform="uppercase"
+        fontWeight="md"
+      >
+        Listado radios
+      </Heading>
       <RadioGroupList />
+      <CommentSection />
+      <BackTopIcon />
+      <AdsBanner />
     </ChakraProvider>
   );
 }
