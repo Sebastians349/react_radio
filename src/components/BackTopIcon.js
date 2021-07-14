@@ -6,7 +6,7 @@ const BackTopIcon = () => {
   return (
     <Flex>
       <Box pos="relative" zIndex={2} alignSelf="flex-end">
-        <Button as={BiArrowToTop} borderRadius="rounded"></Button>
+        <Button as={BiArrowToTop} borderRadius="rounded" href="/index"></Button>
       </Box>
     </Flex>
   );

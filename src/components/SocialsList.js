@@ -1,27 +1,42 @@
 import React from "react";
-import { Icon, Link, Flex } from "@chakra-ui/react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaEnvelope,
-} from "react-icons/fa";
+import { Stack, Button, Link } from "@chakra-ui/react";
+import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 const SocialsList = () => {
   return (
-    <Flex>
-      <Link href="#">
-        <Icon as={FaFacebookF} />
-      </Link>
-      <Link href="#">
-        <Icon as={FaInstagram} />
-      </Link>
-      <Link href="#">
-        <Icon as={FaTwitter} />
-      </Link>
-      <Link href="#">
-        <Icon as={FaEnvelope} />
-      </Link>
-    </Flex>
+    <Stack direction={["column", "row"]}>
+      <Button
+        variant="outline"
+        size="xs"
+        colorScheme="envelope"
+        leftIcon={<FaEnvelope />}
+      >
+        <Link href="mailto: radios@lagarlopa.com">@</Link>
+      </Button>
+      <Button
+        variant="outline"
+        size="xs"
+        colorScheme="facebook"
+        leftIcon={<FaFacebook />}
+      >
+        FB
+      </Button>
+      <Button
+        variant="outline"
+        size="xs"
+        colorScheme="twitter"
+        leftIcon={<FaTwitter />}
+      >
+        TW
+      </Button>
+      <Button
+        variant="outline"
+        size="xs"
+        colorScheme="Instagram"
+        leftIcon={<FaInstagram />}
+      >
+        IG
+      </Button>
+    </Stack>
   );
 };
 
