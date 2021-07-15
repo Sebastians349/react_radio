@@ -1,13 +1,13 @@
 import React from "react";
 import { ChakraProvider, theme, Heading } from "@chakra-ui/react";
 
-import Header from "./components/Header";
-import TopRadioList from "./components/TopRadioList";
-import RadioGroupList from "./components/RadioGroupList";
-import CommentSection from "./components/CommentSection";
-import AdsBanner from "./components/AdsBanner";
-import BackTopIcon from "./components/BackTopIcon";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import TopRadioList from "./components/Main/TopRadioList";
+import RadioGroupList from "./components/Main/RadioGroupList";
+import CommentSection from "./components/Main/CommentSection";
+import AdsBanner from "./components/Main/AdsBanner";
+import BackTopIcon from "./components/Main/BackTopIcon";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

@@ -7,7 +7,6 @@ import {
   MenuItem,
   Link,
 } from "@chakra-ui/react";
-import RadioGroupList from "./RadioGroupList";
 
 const HeaderMenu = () => {
   return (
@@ -17,9 +16,7 @@ const HeaderMenu = () => {
       </MenuButton>
       <MenuList>
         <MenuItem>
-          <Link href={RadioGroupList} isInternal>
-            Listado de radios
-          </Link>
+          <Link href="#">Listado de radios</Link>
         </MenuItem>
         <MenuItem>Comentarios</MenuItem>
         <MenuItem>Contacto</MenuItem>

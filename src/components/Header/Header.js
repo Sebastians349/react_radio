@@ -1,7 +1,7 @@
 import React from "react";
 import { Center, Flex, Spacer, Heading, Icon, Link } from "@chakra-ui/react";
 import { BiRadio } from "react-icons/bi";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import HeaderMenu from "./HeaderMenu";
 
 const Header = () => {

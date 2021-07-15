@@ -1,5 +1,5 @@
 import React from "react";
-import { Center, Container, VStack } from "@chakra-ui/react";
+import { Container, VStack } from "@chakra-ui/react";
 
 const CommentSection = () => {
   return (
