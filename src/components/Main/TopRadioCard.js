@@ -11,37 +11,7 @@ import {
  */
 const TopRadioCard = (props) => {
   const { onOpen } = useDisclosure();
-  console.log("click");
-  /* const radios = [
-    {
-      nombre: "Aspen",
-      dial: "102.3",
-      id: "r1",
-      url: "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio",
-      logo: "../../../public/aspen.png",
-    },
-    {
-      nombre: "Disney",
-      dial: "94.3",
-      id: "r2",
-      url: "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA_SC",
-      logo: "../../../public/disney.gif",
-    },
-    {
-      nombre: "Continental",
-      dial: "Am 590",
-      id: "r3",
-      url: "http://20833.live.streamtheworld.com/CONTINENTAL_SC",
-      logo: "../../../public/continental.png",
-    },
-    {
-      nombre: "CNN",
-      dial: "AM 950",
-      id: "r4",
-      url: "http://estudio.cnnradioargentina.com.ar:8000/stream",
-      logo: "../../../public/cnn.jpg",
-    },
-  ]; */
+
   return (
     <Flex justifyContent="center" mt="1rem">
       <Box
@@ -49,7 +19,7 @@ const TopRadioCard = (props) => {
         w="275px"
         h="250px"
         borderTopWidth="5px"
-        borderTopColor="red"
+        borderTopColor={props.borde}
         borderRadius="lg"
         overflow="hidden"
         boxShadow="md"
@@ -64,14 +34,16 @@ const TopRadioCard = (props) => {
               w="100px"
               h="100px"
               borderRadius="5px"
-              src="aspen.png"
+              src={props.logo}
               alt="logo de radio"
               fallbackSrc="https://via.placeholder.com/150"
             />
             {/*   <ModalPlayer />  linkear no hace nada */}
           </Center>
           <Heading fontSize="md" mt="10px">
-            <Center>{props.nombre}</Center>
+            <Center>
+              {props.nombre} &bull; {props.dial}
+            </Center>
           </Heading>
         </Box>
       </Box>
