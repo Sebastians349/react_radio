@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 
 function ModalPlayer(props) {
-  const { isOpen, onClose } = useDisclosure();
+  const { onOpen, isOpen, onClose } = useDisclosure();
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>

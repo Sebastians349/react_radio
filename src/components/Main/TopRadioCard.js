@@ -4,13 +4,24 @@ import {
   Flex,
   Heading,
   Image,
+  Button,
+  Icon,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
   Box,
   useDisclosure,
 } from "@chakra-ui/react";
-/* import ModalPlayer from "./ModalPlayer";
- */
+import { BiPlayCircle } from "react-icons/bi";
+
+import ModalPlayer from "./ModalPlayer";
+
 const TopRadioCard = (props) => {
-  const { onOpen } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Flex justifyContent="center" mt="1rem">
@@ -28,6 +39,17 @@ const TopRadioCard = (props) => {
       >
         <Box p="6">
           <Center>
+            {/*  <Image
+              onClick={onOpen}
+              mt="1.5rem"
+              w="100px"
+              h="100px"
+              borderRadius="5px"
+              src={props.logo}
+              alt="logo de radio"
+              fallbackSrc="https://via.placeholder.com/150"
+            />
+            <ModalPlayer /> */}
             <Image
               onClick={onOpen}
               mt="1.5rem"
@@ -38,7 +60,38 @@ const TopRadioCard = (props) => {
               alt="logo de radio"
               fallbackSrc="https://via.placeholder.com/150"
             />
-            {/*   <ModalPlayer />  linkear no hace nada */}
+
+            <Modal
+              isOpen={isOpen}
+              onClose={onClose}
+              closeOnOverlayClick={false}
+            >
+              <ModalOverlay />
+              <ModalContent>
+                <Center>
+                  <ModalHeader fontSize="md"></ModalHeader>
+                </Center>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Center>
+                    <Icon
+                      as={BiPlayCircle}
+                      fontSize="4rem"
+                      variant="outline"
+                      color="blue.500"
+                    ></Icon>
+                  </Center>
+                </ModalBody>
+                <Center>
+                  <ModalFooter>
+                    <Center>
+                      {props.nombre} &bull; {props.dial}
+                    </Center>
+                  </ModalFooter>
+                </Center>
+              </ModalContent>
+            </Modal>
+            {/* FIN MODAL */}
           </Center>
           <Heading fontSize="md" fontWeight="semibold" mt="10px">
             <Center>

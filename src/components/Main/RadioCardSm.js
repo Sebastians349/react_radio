@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Flex, Center, Image, Heading } from "@chakra-ui/react";
-import ModalPlayer from "./ModalPlayer";
 
 const RadioCardSm = (props) => {
   return (
@@ -28,10 +27,7 @@ const RadioCardSm = (props) => {
               fallbackSrc="https://via.placeholder.com/150"
             />
           </Center>
-          <Heading fontSize="md" mt="10px">
-            {/*             {radios[0].nombre} &bull; {radios[0].dial}
-             */}{" "}
-          </Heading>
+          <Heading fontSize="md" mt="10px"></Heading>
         </Box>
       </Box>
     </Flex>

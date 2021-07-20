@@ -18,7 +18,7 @@ function App() {
         mt="25"
         ml="3"
         textTransform="uppercase"
-        fontWeight="md"
+        fontWeight="semibold"
       >
         Top radios
       </Heading>
@@ -29,7 +29,7 @@ function App() {
         mt="25"
         ml="3"
         textTransform="uppercase"
-        fontWeight="md"
+        fontWeight="semibold"
       >
         Listado radios
       </Heading>
