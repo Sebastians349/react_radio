@@ -16,10 +16,16 @@ const HeaderMenu = () => {
       </MenuButton>
       <MenuList>
         <MenuItem>
-          <Link href="#">Listado de radios</Link>
+          <Link>Listado de radios</Link>
         </MenuItem>
-        <MenuItem>Comentarios</MenuItem>
-        <MenuItem>Contacto</MenuItem>
+
+        <MenuItem>
+          <Link href="#">Comentarios</Link>
+        </MenuItem>
+
+        <MenuItem>
+          <Link href="#">Contacto</Link>
+        </MenuItem>
       </MenuList>
     </Menu>
   );

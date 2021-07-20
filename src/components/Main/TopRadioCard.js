@@ -7,35 +7,41 @@ import {
   Box,
   useDisclosure,
 } from "@chakra-ui/react";
-import ModalPlayer from "./ModalPlayer";
-
+/* import ModalPlayer from "./ModalPlayer";
+ */
 const TopRadioCard = (props) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const radios = [
+  const { onOpen } = useDisclosure();
+  console.log("click");
+  /* const radios = [
     {
       nombre: "Aspen",
       dial: "102.3",
-      streamId:
-        "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio",
-      /*       logo: "../../public/aspen.png",
-       */
+      id: "r1",
+      url: "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio",
+      logo: "../../../public/aspen.png",
     },
     {
-      nombre: "La 100",
-      dial: "99.9",
-      streamId: "",
+      nombre: "Disney",
+      dial: "94.3",
+      id: "r2",
+      url: "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA_SC",
+      logo: "../../../public/disney.gif",
     },
     {
-      nombre: "La Red",
-      dial: "AM 710",
-      streamId: "",
+      nombre: "Continental",
+      dial: "Am 590",
+      id: "r3",
+      url: "http://20833.live.streamtheworld.com/CONTINENTAL_SC",
+      logo: "../../../public/continental.png",
     },
     {
-      nombre: "Radio Mitre",
-      dial: "AM 790",
-      streamId: "",
+      nombre: "CNN",
+      dial: "AM 950",
+      id: "r4",
+      url: "http://estudio.cnnradioargentina.com.ar:8000/stream",
+      logo: "../../../public/cnn.jpg",
     },
-  ];
+  ]; */
   return (
     <Flex justifyContent="center" mt="1rem">
       <Box
@@ -62,12 +68,10 @@ const TopRadioCard = (props) => {
               alt="logo de radio"
               fallbackSrc="https://via.placeholder.com/150"
             />
-            <ModalPlayer /> {/* linkear no hace nada */}
+            {/*   <ModalPlayer />  linkear no hace nada */}
           </Center>
           <Heading fontSize="md" mt="10px">
-            <Center>
-              {radios[0].nombre} &bull; {radios[0].dial}
-            </Center>
+            <Center>{props.nombre}</Center>
           </Heading>
         </Box>
       </Box>
