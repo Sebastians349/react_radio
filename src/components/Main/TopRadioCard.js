@@ -40,7 +40,7 @@ const TopRadioCard = (props) => {
             />
             {/*   <ModalPlayer />  linkear no hace nada */}
           </Center>
-          <Heading fontSize="md" mt="10px">
+          <Heading fontSize="md" fontWeight="semibold" mt="10px">
             <Center>
               {props.nombre} &bull; {props.dial}
             </Center>
