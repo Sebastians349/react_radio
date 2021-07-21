@@ -18,7 +18,13 @@ function ModalPlayer(props) {
   const { onOpen, isOpen, onClose } = useDisclosure();
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      closeOnOverlayClick={false}
+      isCentered
+      size="md"
+    >
       <ModalOverlay />
       <ModalContent>
         <Center>
@@ -27,14 +33,21 @@ function ModalPlayer(props) {
         <ModalCloseButton />
         <ModalBody>
           <Center>
-            <Icon as={BiPlayCircle} fontSize="4rem" variant="outline"></Icon>
+            <Button variant="transparent">
+              <Icon
+                as={BiPlayCircle}
+                fontSize="4rem"
+                variant="outline"
+                color="blue.500"
+              />
+            </Button>
           </Center>
         </ModalBody>
         <Center>
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Cerrar
-            </Button>
+            <Center>
+              {props.nombre} &bull; {props.dial}
+            </Center>
           </ModalFooter>
         </Center>
       </ModalContent>

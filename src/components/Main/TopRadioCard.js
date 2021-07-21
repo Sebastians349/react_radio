@@ -17,11 +17,10 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { BiPlayCircle } from "react-icons/bi";
-
 import ModalPlayer from "./ModalPlayer";
 
 const TopRadioCard = (props) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure(props);
 
   return (
     <Flex justifyContent="center" mt="1rem">
@@ -39,17 +38,6 @@ const TopRadioCard = (props) => {
       >
         <Box p="6">
           <Center>
-            {/*  <Image
-              onClick={onOpen}
-              mt="1.5rem"
-              w="100px"
-              h="100px"
-              borderRadius="5px"
-              src={props.logo}
-              alt="logo de radio"
-              fallbackSrc="https://via.placeholder.com/150"
-            />
-            <ModalPlayer /> */}
             <Image
               onClick={onOpen}
               mt="1.5rem"
@@ -60,11 +48,14 @@ const TopRadioCard = (props) => {
               alt="logo de radio"
               fallbackSrc="https://via.placeholder.com/150"
             />
-
+            {/*   FIX DESDE AFUERA           <ModalPlayer />
+             */}
             <Modal
               isOpen={isOpen}
               onClose={onClose}
               closeOnOverlayClick={false}
+              isCentered
+              size="md"
             >
               <ModalOverlay />
               <ModalContent>
@@ -74,12 +65,14 @@ const TopRadioCard = (props) => {
                 <ModalCloseButton />
                 <ModalBody>
                   <Center>
-                    <Icon
-                      as={BiPlayCircle}
-                      fontSize="4rem"
-                      variant="outline"
-                      color="blue.500"
-                    ></Icon>
+                    <Button variant="transparent">
+                      <Icon
+                        as={BiPlayCircle}
+                        fontSize="4rem"
+                        variant="outline"
+                        color="blue.500"
+                      />
+                    </Button>
                   </Center>
                 </ModalBody>
                 <Center>
@@ -91,7 +84,8 @@ const TopRadioCard = (props) => {
                 </Center>
               </ModalContent>
             </Modal>
-            {/* FIN MODAL */}
+            {/*             /////////FIN MODAL////////
+             */}
           </Center>
           <Heading fontSize="md" fontWeight="semibold" mt="10px">
             <Center>
