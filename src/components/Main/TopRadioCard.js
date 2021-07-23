@@ -18,13 +18,14 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { BiPlayCircle, BiPauseCircle } from "react-icons/bi";
+import InlinePlayer from "./InlinePlayer";
 
 const TopRadioCard = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [estado, setEstado] = useState("");
+  const [estado, setEstado] = useState();
 
   const clickHandler = () => {
-    setEstado("Reproduciendo!");
+    setEstado(estado);
   };
 
   return (
@@ -77,7 +78,7 @@ const TopRadioCard = (props) => {
                 </ModalBody>
                 <Center>
                   <ModalFooter>
-                    <Button variant="transparent">
+                    {/* <Button variant="transparent">
                       <Icon
                         onClick={clickHandler}
                         as={BiPlayCircle}
@@ -94,7 +95,8 @@ const TopRadioCard = (props) => {
                         variant="outline"
                         color="blue.500"
                       />
-                    </Button>
+                    </Button> */}
+                    <InlinePlayer />
                   </ModalFooter>
                 </Center>
               </ModalContent>
