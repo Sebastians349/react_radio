@@ -11,6 +11,7 @@ const TopRadioList = () => {
       url: "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio",
       logo: "aspen.png",
       borde: "blue.500",
+      banda: "FM",
     },
     {
       nombre: "Disney",
@@ -19,22 +20,25 @@ const TopRadioList = () => {
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA_SC",
       logo: "disney.gif",
       borde: "red.600",
+      banda: "FM",
     },
     {
       nombre: "Continental",
-      dial: "Am 590",
+      dial: "590",
       id: "r3",
       url: "http://20833.live.streamtheworld.com/CONTINENTAL_SC",
       logo: "continental.png",
       borde: "yellow.300",
+      banda: "AM",
     },
     {
-      nombre: "Cnn Radio",
-      dial: "Am 950",
+      nombre: "Cnn ",
+      dial: "950",
       id: "r4",
       url: "http://estudio.cnnradioargentina.com.ar:8000/stream",
       logo: "cnn.jpg",
       borde: "green.600",
+      banda: "AM",
     },
   ];
   return (
@@ -45,6 +49,7 @@ const TopRadioList = () => {
         url={radios[0].url}
         logo={radios[0].logo}
         borde={radios[0].borde}
+        banda={radios[0].banda}
       />
       <TopRadioCard
         nombre={radios[1].nombre}
@@ -52,6 +57,7 @@ const TopRadioList = () => {
         url={radios[1].url}
         logo={radios[1].logo}
         borde={radios[1].borde}
+        banda={radios[1].banda}
       />
       <TopRadioCard
         nombre={radios[2].nombre}
@@ -59,6 +65,7 @@ const TopRadioList = () => {
         url={radios[2].url}
         logo={radios[2].logo}
         borde={radios[2].borde}
+        banda={radios[2].banda}
       />
       <TopRadioCard
         nombre={radios[3].nombre}
@@ -66,6 +73,7 @@ const TopRadioList = () => {
         url={radios[3].url}
         logo={radios[3].logo}
         borde={radios[3].borde}
+        banda={radios[3].banda}
       />
     </SimpleGrid>
   );

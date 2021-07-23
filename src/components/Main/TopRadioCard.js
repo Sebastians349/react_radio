@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import {
   Center,
   Flex,
@@ -16,11 +17,15 @@ import {
   Box,
   useDisclosure,
 } from "@chakra-ui/react";
-import { BiPlayCircle } from "react-icons/bi";
-import ModalPlayer from "./ModalPlayer";
+import { BiPlayCircle, BiPauseCircle } from "react-icons/bi";
 
 const TopRadioCard = (props) => {
-  const { isOpen, onOpen, onClose } = useDisclosure(props);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [estado, setEstado] = useState("");
+
+  const clickHandler = () => {
+    setEstado("Reproduciendo!");
+  };
 
   return (
     <Flex justifyContent="center" mt="1rem">
@@ -55,31 +60,41 @@ const TopRadioCard = (props) => {
               onClose={onClose}
               closeOnOverlayClick={false}
               isCentered
-              size="md"
+              size="sm"
             >
               <ModalOverlay />
               <ModalContent>
                 <Center>
-                  <ModalHeader fontSize="md"></ModalHeader>
+                  <ModalHeader fontSize="xl" fontWeight="semibold">
+                    {props.nombre}
+                  </ModalHeader>
                 </Center>
                 <ModalCloseButton />
                 <ModalBody>
                   <Center>
-                    <Button variant="transparent">
-                      <Icon
-                        as={BiPlayCircle}
-                        fontSize="4rem"
-                        variant="outline"
-                        color="blue.500"
-                      />
-                    </Button>
+                    {props.banda} &bull; {props.dial}
                   </Center>
                 </ModalBody>
                 <Center>
                   <ModalFooter>
-                    <Center>
-                      {props.nombre} &bull; {props.dial}
-                    </Center>
+                    <Button variant="transparent">
+                      <Icon
+                        onClick={clickHandler}
+                        as={BiPlayCircle}
+                        fontSize="xxx-large"
+                        variant="outline"
+                        color="blue.500"
+                      />
+                    </Button>
+                    <Button variant="transparent">
+                      <Icon
+                        onClick={clickHandler}
+                        as={BiPauseCircle}
+                        fontSize="xxx-large"
+                        variant="outline"
+                        color="blue.500"
+                      />
+                    </Button>
                   </ModalFooter>
                 </Center>
               </ModalContent>
