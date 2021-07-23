@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import {
   Center,
   Flex,
   Heading,
   Image,
-  Button,
-  Icon,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -17,16 +15,10 @@ import {
   Box,
   useDisclosure,
 } from "@chakra-ui/react";
-import { BiPlayCircle, BiPauseCircle } from "react-icons/bi";
 import InlinePlayer from "./InlinePlayer";
 
 const TopRadioCard = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [estado, setEstado] = useState();
-
-  const clickHandler = () => {
-    setEstado(estado);
-  };
 
   return (
     <Flex justifyContent="center" mt="1rem">
@@ -54,8 +46,7 @@ const TopRadioCard = (props) => {
               alt="logo de radio"
               fallbackSrc="https://via.placeholder.com/150"
             />
-            {/*   FIX DESDE AFUERA           <ModalPlayer />
-             */}
+
             <Modal
               isOpen={isOpen}
               onClose={onClose}
@@ -78,24 +69,6 @@ const TopRadioCard = (props) => {
                 </ModalBody>
                 <Center>
                   <ModalFooter>
-                    {/* <Button variant="transparent">
-                      <Icon
-                        onClick={clickHandler}
-                        as={BiPlayCircle}
-                        fontSize="xxx-large"
-                        variant="outline"
-                        color="blue.500"
-                      />
-                    </Button>
-                    <Button variant="transparent">
-                      <Icon
-                        onClick={clickHandler}
-                        as={BiPauseCircle}
-                        fontSize="xxx-large"
-                        variant="outline"
-                        color="blue.500"
-                      />
-                    </Button> */}
                     <InlinePlayer />
                   </ModalFooter>
                 </Center>

@@ -9,12 +9,14 @@ function InlinePlayer({ audio }) {
     "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio"
   );
 
-  useEffect(() => {
-    playing ? player.play() : player.pause();
+  useEffect(
+    () => {
+      playing ? player.play() : player.pause();
 
-    // This is cleanup of the effect
-    return () => player.pause();
-  }, [playing]);
+      // This is cleanup of the effect
+      return () => player.pause();
+    } /* [playing] */
+  ); /* chillaba por un missing hook dependency */
   // ^ Run the effect every time the `playing` is changed
 
   function togglePlay() {
@@ -25,7 +27,7 @@ function InlinePlayer({ audio }) {
 
   return (
     <>
-      <Button onClick={() => togglePlay()}>
+      <Button variant="transparent" onClick={() => togglePlay()}>
         {playing ? (
           <Icon
             fontSize="xxx-large"
