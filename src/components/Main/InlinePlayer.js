@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 import { BiPlayCircle, BiPauseCircle } from "react-icons/bi";
 import { Button, Icon } from "@chakra-ui/react";
 
-function InlinePlayer({ audio }) {
+function InlinePlayer(props) {
   const [playing, setPlaying] = useState(false);
 
-  const player = new Audio(
-    "https://mdstrm.com/audio/60a2745ff943100826374a70/icecast.audio"
-  );
+  const player = new Audio(props.url);
 
   useEffect(
     () => {

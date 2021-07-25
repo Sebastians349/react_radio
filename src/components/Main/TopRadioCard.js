@@ -19,7 +19,6 @@ import InlinePlayer from "./InlinePlayer";
 
 const TopRadioCard = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   return (
     <Flex justifyContent="center" mt="1rem">
       <Box
@@ -46,7 +45,8 @@ const TopRadioCard = (props) => {
               alt="logo de radio"
               fallbackSrc="https://via.placeholder.com/150"
             />
-
+            {/*    //////// MODAL////////
+             */}
             <Modal
               isOpen={isOpen}
               onClose={onClose}
@@ -69,7 +69,7 @@ const TopRadioCard = (props) => {
                 </ModalBody>
                 <Center>
                   <ModalFooter>
-                    <InlinePlayer />
+                    <InlinePlayer url={props.url} />
                   </ModalFooter>
                 </Center>
               </ModalContent>
