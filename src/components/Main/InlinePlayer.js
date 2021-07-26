@@ -11,15 +11,11 @@ function InlinePlayer(props) {
     () => {
       playing ? player.play() : player.pause();
 
-      // This is cleanup of the effect
       return () => player.pause();
     } /* [playing] */
   ); /* chillaba por un missing hook dependency */
-  // ^ Run the effect every time the `playing` is changed
 
   function togglePlay() {
-    // Using the callback version of `setState` so you always
-    // toggle based on the latest state
     setPlaying((s) => !s);
   }
 
@@ -28,15 +24,17 @@ function InlinePlayer(props) {
       <Button variant="transparent" onClick={() => togglePlay()}>
         {playing ? (
           <Icon
+            isLoading
+            colorScheme="teal"
+            variant="solid"
             fontSize="xxx-large"
-            variant="outline"
             color="blue.500"
             as={BiPauseCircle}
           />
         ) : (
           <Icon
             fontSize="xxx-large"
-            variant="outline"
+            variant="transparent"
             color="blue.500"
             as={BiPlayCircle}
           />

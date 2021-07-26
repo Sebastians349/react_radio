@@ -13,6 +13,7 @@ import {
   ModalBody,
   ModalCloseButton,
   Box,
+  Button,
   useDisclosure,
 } from "@chakra-ui/react";
 import InlinePlayer from "./InlinePlayer";
@@ -35,16 +36,18 @@ const TopRadioCard = (props) => {
       >
         <Box p="6">
           <Center>
-            <Image
-              onClick={onOpen}
-              mt="1.5rem"
-              w="100px"
-              h="100px"
-              borderRadius="5px"
-              src={props.logo}
-              alt="logo de radio"
-              fallbackSrc="https://via.placeholder.com/150"
-            />
+            <Button h="100px" variant="transparent">
+              <Image
+                onClick={onOpen}
+                mt="1.5rem"
+                w="100px"
+                h="100px"
+                borderRadius="5px"
+                src={props.logo}
+                alt="logo de radio"
+                fallbackSrc="https://via.placeholder.com/150"
+              />
+            </Button>
             {/*    //////// MODAL////////
              */}
             <Modal
@@ -77,7 +80,7 @@ const TopRadioCard = (props) => {
             {/*             /////////FIN MODAL////////
              */}
           </Center>
-          <Heading fontSize="md" fontWeight="semibold" mt="10px">
+          <Heading fontSize="md" fontWeight="semibold" mt="50px">
             <Center>
               {props.nombre} &bull; {props.dial}
             </Center>
