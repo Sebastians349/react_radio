@@ -21,11 +21,11 @@ const RadioGroupList = () => {
     },
     {
       id: 3,
-      nombre: "Mitre",
+      nombre: "La red",
       dial: "910",
       banda: "AM",
       url: "http://playerservices.streamtheworld.com/api/livestream-redirect/LA_RED_AM910.mp3",
-      logo: "mitre.png",
+      logo: "lared.jpeg",
     },
 
     {
@@ -97,7 +97,7 @@ const RadioGroupList = () => {
       dial: "92.3",
       id: 12,
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_POPULAR",
-      logo: "",
+      logo: "TODO",
       banda: "FM",
     },
     {
@@ -105,7 +105,7 @@ const RadioGroupList = () => {
       dial: "700",
       id: 13,
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
-      logo: "",
+      logo: "TODO",
       banda: "AM",
     },
     {
@@ -125,7 +125,81 @@ const RadioGroupList = () => {
       banda: "AM",
     },
     {
-      nombre: "POPBUG",
+      nombre: "SOMOS",
+      dial: "530",
+      id: 16,
+      url: "http://cdn.instream.audio:9288/stream",
+      logo: "somos.png",
+      banda: "AM",
+    },
+    {
+      nombre: "El destape",
+      dial: "107.3",
+      id: 17,
+      url: "https://ipanel.instream.audio/44018/io/get/a2becdb13f77379019e41c81af7b42f6-9r1w9746kgkv8dg7/d1u78w1u5wqpjw31dtjprbk9dttq8wk5c5pjwrbnchmpyehr60r38bvkeht6arbd",
+      logo: "eldestape.png",
+      banda: "FM",
+    },
+    {
+      nombre: "Congo",
+      dial: "Online",
+      id: 18,
+      url: "https://cdn2.instream.audio/:9243/stream",
+      logo: "congo.png",
+      banda: "FM",
+    },
+    {
+      nombre: "Futurock",
+      dial: "Online",
+      id: 19,
+      url: "https://cdn2.instream.audio/:8007/stream",
+      logo: "futurock.jpg",
+      banda: "FM",
+    },
+    {
+      nombre: "Radio 10",
+      dial: "710",
+      id: 20,
+      url: "http://69.175.20.242:8122/live",
+      logo: "radio10.jpg",
+      banda: "AM",
+    },
+    {
+      nombre: "AM 750",
+      dial: "750",
+      id: 21,
+      url: "https://mdstrm.com/audio/601bf3e463786007e6d3b9b0/icecast.audio",
+      logo: "750.jpg",
+      banda: "AM",
+    },
+    {
+      nombre: "Vorterix",
+      dial: "92.1",
+      id: 21,
+      url: "http://radiolatina.live:9300/;",
+      logo: "vorterix.png",
+      banda: "FM",
+    },
+    {
+      nombre: "Con vos",
+      dial: "89.9",
+      id: 22,
+      url: "http://sonic.dattalive.com:8260/",
+      logo: "convos.jpg",
+      banda: "FM",
+    },
+    {
+      nombre: "Urbana",
+      dial: "104.3",
+      id: 23,
+      url: "FIX",
+      logo: "urbana.jpg",
+      banda: "FM",
+    },
+
+    //////////////////////////////////
+    {
+      nombre: "POPFIX",
       dial: "700",
       id: 100,
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
@@ -133,15 +207,7 @@ const RadioGroupList = () => {
       banda: "AM",
     },
     {
-      nombre: "VALEBUG ",
-      dial: "700",
-      id: 13,
-      url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
-      logo: "",
-      banda: "AM",
-    },
-    {
-      nombre: "URBANA PLAYBUG",
+      nombre: "VALEFIX ",
       dial: "700",
       id: 13,
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
@@ -238,6 +304,14 @@ const RadioGroupList = () => {
         logo={listadoRadios[10].logo}
         borde={listadoRadios[10].borde}
         banda={listadoRadios[10].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[23].nombre}
+        dial={listadoRadios[23].dial}
+        url={listadoRadios[23].url}
+        logo={listadoRadios[23].logo}
+        borde={listadoRadios[23].borde}
+        banda={listadoRadios[23].banda}
       />
     </SimpleGrid>
   );

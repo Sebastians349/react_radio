@@ -27,7 +27,8 @@ const TopRadioList = () => {
       nombre: "Mitre",
       dial: "910",
       banda: "AM",
-      url: "http://playerservices.streamtheworld.com/api/livestream-redirect/LA_RED_AM910.mp3",
+      url: "https://radiomm.000webhostapp.com/",
+      borde: "yellow.300",
       logo: "mitre.png",
     },
     {
