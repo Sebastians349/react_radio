@@ -40,8 +40,8 @@ const TopRadioCard = (props) => {
               <Image
                 onClick={onOpen}
                 mt="1.5rem"
-                w="100px"
-                h="100px"
+                w="125px"
+                h="125px"
                 borderRadius="5px"
                 src={props.logo}
                 alt="logo de radio"

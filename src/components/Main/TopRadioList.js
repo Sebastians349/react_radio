@@ -23,13 +23,12 @@ const TopRadioList = () => {
       banda: "FM",
     },
     {
-      nombre: "Continental",
-      dial: "590",
-      id: "r3",
-      url: "http://20833.live.streamtheworld.com/CONTINENTAL_SC",
-      logo: "continental.png",
-      borde: "yellow.300",
+      id: 3,
+      nombre: "Mitre",
+      dial: "910",
       banda: "AM",
+      url: "http://playerservices.streamtheworld.com/api/livestream-redirect/LA_RED_AM910.mp3",
+      logo: "mitre.png",
     },
     {
       nombre: "Cnn ",
