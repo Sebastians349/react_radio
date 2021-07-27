@@ -192,26 +192,65 @@ const RadioGroupList = () => {
       nombre: "Urbana",
       dial: "104.3",
       id: 23,
-      url: "FIX",
+      url: "https://mytuner-radio.com/radio/urbana-play-1043-fm-479742/?utm_source=widget&amp;utm_medium=player", //FIX BUG
       logo: "urbana.jpg",
       banda: "FM",
     },
 
-    //////////////////////////////////
     {
-      nombre: "POPFIX",
-      dial: "700",
-      id: 100,
-      url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
-      logo: "",
-      banda: "AM",
+      nombre: "POP",
+      dial: "101.5",
+      id: 24,
+      url: "http://streaming.dinesat.com:6725/stream/",
+      logo: "pop.png",
+      banda: "FM",
     },
     {
-      nombre: "VALEFIX ",
-      dial: "700",
-      id: 13,
-      url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
-      logo: "",
+      nombre: "VALE",
+      dial: "97.5",
+      id: 25,
+      url: "", //FIX BUG
+      logo: "vale.png",
+      banda: "FM",
+    },
+    {
+      nombre: "MEGA",
+      dial: "98.3",
+      id: 26,
+      url: "", //FIX BUG
+      logo: "mega.jpg",
+      banda: "FM",
+    },
+    {
+      nombre: "ONE",
+      dial: "103.7",
+      id: 27,
+      url: "", //FIX BUG
+      logo: "one.jpg",
+      banda: "FM",
+    },
+    {
+      nombre: "VIDA",
+      dial: "97.9",
+      id: 28,
+      url: "http://streaming450tb.locucionar.com:8000/stream",
+      logo: "vida.png",
+      banda: "FM",
+    },
+    {
+      nombre: "La100",
+      dial: "99.9",
+      id: 28,
+      url: "", //FIX BUG
+      logo: "la100.png",
+      banda: "FM",
+    },
+    {
+      nombre: "Mitre",
+      dial: "910",
+      id: 29,
+      url: "https://radiomm.000webhostapp.com/",
+      logo: "mitre.jpg",
       banda: "AM",
     },
   ];
@@ -408,6 +447,54 @@ const RadioGroupList = () => {
         logo={listadoRadios[23].logo}
         borde={listadoRadios[23].borde}
         banda={listadoRadios[23].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[24].nombre}
+        dial={listadoRadios[24].dial}
+        url={listadoRadios[24].url}
+        logo={listadoRadios[24].logo}
+        borde={listadoRadios[24].borde}
+        banda={listadoRadios[24].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[25].nombre}
+        dial={listadoRadios[25].dial}
+        url={listadoRadios[25].url}
+        logo={listadoRadios[25].logo}
+        borde={listadoRadios[25].borde}
+        banda={listadoRadios[25].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[26].nombre}
+        dial={listadoRadios[26].dial}
+        url={listadoRadios[26].url}
+        logo={listadoRadios[26].logo}
+        borde={listadoRadios[26].borde}
+        banda={listadoRadios[26].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[27].nombre}
+        dial={listadoRadios[27].dial}
+        url={listadoRadios[27].url}
+        logo={listadoRadios[27].logo}
+        borde={listadoRadios[27].borde}
+        banda={listadoRadios[27].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[28].nombre}
+        dial={listadoRadios[28].dial}
+        url={listadoRadios[28].url}
+        logo={listadoRadios[28].logo}
+        borde={listadoRadios[28].borde}
+        banda={listadoRadios[28].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[29].nombre}
+        dial={listadoRadios[29].dial}
+        url={listadoRadios[29].url}
+        logo={listadoRadios[29].logo}
+        borde={listadoRadios[29].borde}
+        banda={listadoRadios[29].banda}
       />
     </SimpleGrid>
   );

@@ -16,7 +16,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import InlinePlayer from "./InlinePlayer";
-
+import ErrorAlert from "./ErrorAlert";
 const RadioCardSm = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -54,14 +54,12 @@ const RadioCardSm = (props) => {
               onClose={onClose}
               closeOnOverlayClick={false}
               isCentered
-              size="md"
+              size="xl"
             >
               <ModalOverlay />
               <ModalContent>
                 <Center>
-                  <ModalHeader fontSize="xl" fontWeight="semibold">
-                    {props.nombre}
-                  </ModalHeader>
+                  <ModalHeader></ModalHeader>
                 </Center>
                 <ModalCloseButton />
                 <ModalBody>
@@ -81,6 +79,7 @@ const RadioCardSm = (props) => {
                 <Center>
                   <ModalFooter>
                     <InlinePlayer url={props.url} />
+                    <ErrorAlert />
                   </ModalFooter>
                 </Center>
               </ModalContent>

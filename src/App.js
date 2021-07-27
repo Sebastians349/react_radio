@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider, theme, Heading } from "@chakra-ui/react";
+import { ChakraProvider, theme, Heading, Center } from "@chakra-ui/react";
 
 import Header from "./components/Header/Header";
 import TopRadioList from "./components/Main/TopRadioList";
@@ -23,10 +23,11 @@ function App() {
         Top radios
       </Heading>
       <TopRadioList />
+      <Center></Center>
       <AdsBanner />
       <Heading
         fontSize="md"
-        mt="25"
+        mt="55"
         ml="3"
         textTransform="uppercase"
         fontWeight="semibold"
