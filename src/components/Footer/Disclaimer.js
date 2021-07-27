@@ -1,5 +1,5 @@
 import React from "react";
-import { VStack, Center, Text, Image, Link } from "@chakra-ui/react";
+import { VStack, Text, Link } from "@chakra-ui/react";
 
 const Disclaimer = () => {
   return (
@@ -7,7 +7,7 @@ const Disclaimer = () => {
       <Text fontSize="xs">
         Copyright &copy; Radios de argentina. Buenos Aires. Argentina.
       </Text>
-      <Text fontSize="xs">
+      {/* <Text fontSize="xs">
         Te gusta/sirve la app? Considerá regalarme un
         <Link href="https://cafecito.app/sebote">
           <Center>
@@ -22,10 +22,13 @@ const Disclaimer = () => {
             />
           </Center>
         </Link>
-      </Text>
+      </Text> */}
       <Text fontSize="xs">
         Desarrollado con &hearts; por
-        <Link href="https://sebasimarro.com"> Sebastián Simarro </Link>
+        <Link isExternal href="https://sebasimarro.com">
+          {" "}
+          Sebastián Simarro{" "}
+        </Link>
       </Text>
     </VStack>
   );
