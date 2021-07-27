@@ -17,7 +17,7 @@ function ErrorAlert() {
 
   return (
     <>
-      <Button size="xs" bg="red.200" onClick={onOpen}>
+      <Button size="xs" bg="red.300" onClick={onOpen}>
         ¿ERROR?
       </Button>
       <AlertDialog
@@ -34,7 +34,8 @@ function ErrorAlert() {
           <AlertDialogCloseButton />
           <AlertDialogBody>
             Pruebe recargando la página (F5). Si el error persiste, puede
-            deberse a la conexión o la fuente del stream.
+            deberse a una mala conexión temporal o cambios en la fuente pública
+            del stream. Sientase libre de enviarnos un mail.
           </AlertDialogBody>
           <AlertDialogFooter>
             <Button ref={cancelRef} onClick={onClose}>

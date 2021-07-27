@@ -17,6 +17,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import InlinePlayer from "./InlinePlayer";
+import ErrorAlert from "./ErrorAlert";
 
 const TopRadioCard = (props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -69,8 +70,8 @@ const TopRadioCard = (props) => {
                   <Center>
                     <Image
                       mr="15px"
-                      w="75px"
-                      h="75px"
+                      w="125px"
+                      h="125px"
                       borderRadius="5px"
                       src={props.logo}
                       alt="logo de radio"
@@ -82,6 +83,7 @@ const TopRadioCard = (props) => {
                 <Center>
                   <ModalFooter>
                     <InlinePlayer url={props.url} />
+                    <ErrorAlert />
                   </ModalFooter>
                 </Center>
               </ModalContent>

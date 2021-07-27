@@ -59,15 +59,15 @@ const RadioCardSm = (props) => {
               <ModalOverlay />
               <ModalContent>
                 <Center>
-                  <ModalHeader></ModalHeader>
+                  <ModalHeader textAlign="center">{props.nombre}</ModalHeader>
                 </Center>
                 <ModalCloseButton />
                 <ModalBody>
                   <Center>
                     <Image
                       mr="15px"
-                      w="75px"
-                      h="75px"
+                      w="125px"
+                      h="125px"
                       borderRadius="5px"
                       src={props.logo}
                       alt="logo de radio"

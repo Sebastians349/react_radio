@@ -24,16 +24,15 @@ function InlinePlayer(props) {
       <Button variant="transparent" onClick={() => togglePlay()}>
         {playing ? (
           <Icon
-            isLoading
             colorScheme="teal"
             variant="solid"
-            fontSize="xxx-large"
+            fontSize="4rem"
             color="blue.500"
             as={BiPauseCircle}
           />
         ) : (
           <Icon
-            fontSize="xxx-large"
+            fontSize="4rem"
             variant="transparent"
             color="blue.500"
             as={BiPlayCircle}
