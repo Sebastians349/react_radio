@@ -55,7 +55,7 @@ const TopRadioCard = (props) => {
               onClose={onClose}
               closeOnOverlayClick={false}
               isCentered
-              size="sm"
+              size="md"
             >
               <ModalOverlay />
               <ModalContent>
@@ -67,6 +67,15 @@ const TopRadioCard = (props) => {
                 <ModalCloseButton />
                 <ModalBody>
                   <Center>
+                    <Image
+                      mr="15px"
+                      w="75px"
+                      h="75px"
+                      borderRadius="5px"
+                      src={props.logo}
+                      alt="logo de radio"
+                      fallbackSrc="https://via.placeholder.com/50"
+                    />
                     {props.banda} &bull; {props.dial}
                   </Center>
                 </ModalBody>

@@ -30,7 +30,7 @@ const RadioGroupList = () => {
 
     {
       id: 4,
-      nombre: "latina",
+      nombre: "Latina",
       dial: "101.1",
       banda: "FM",
       url: "http://streaming.latina101.com.ar:9000/Repetidoras",
@@ -97,7 +97,7 @@ const RadioGroupList = () => {
       dial: "92.3",
       id: 12,
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_POPULAR",
-      logo: "TODO",
+      logo: "popular.jpeg",
       banda: "FM",
     },
     {
@@ -105,7 +105,7 @@ const RadioGroupList = () => {
       dial: "700",
       id: 13,
       url: "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENA3",
-      logo: "TODO",
+      logo: "c3.jpg",
       banda: "AM",
     },
     {
@@ -113,7 +113,7 @@ const RadioGroupList = () => {
       dial: "97.3",
       id: 14,
       url: "http://streaming.redboing.com:8000/radio.aac",
-      logo: "",
+      logo: "boing.jpg",
       banda: "FM",
     },
     {
@@ -121,7 +121,7 @@ const RadioGroupList = () => {
       dial: "870",
       id: 15,
       url: "http://sa.mp3.icecast.magma.edge-access.net:7200/sc_rad1",
-      logo: "",
+      logo: "nacional.jpeg",
       banda: "AM",
     },
     {
@@ -145,7 +145,7 @@ const RadioGroupList = () => {
       dial: "Online",
       id: 18,
       url: "https://cdn2.instream.audio/:9243/stream",
-      logo: "congo.png",
+      logo: "congo.jpg",
       banda: "FM",
     },
     {
@@ -304,6 +304,102 @@ const RadioGroupList = () => {
         logo={listadoRadios[10].logo}
         borde={listadoRadios[10].borde}
         banda={listadoRadios[10].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[11].nombre}
+        dial={listadoRadios[11].dial}
+        url={listadoRadios[11].url}
+        logo={listadoRadios[11].logo}
+        borde={listadoRadios[11].borde}
+        banda={listadoRadios[11].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[12].nombre}
+        dial={listadoRadios[12].dial}
+        url={listadoRadios[12].url}
+        logo={listadoRadios[12].logo}
+        borde={listadoRadios[12].borde}
+        banda={listadoRadios[12].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[13].nombre}
+        dial={listadoRadios[13].dial}
+        url={listadoRadios[13].url}
+        logo={listadoRadios[13].logo}
+        borde={listadoRadios[13].borde}
+        banda={listadoRadios[13].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[14].nombre}
+        dial={listadoRadios[14].dial}
+        url={listadoRadios[14].url}
+        logo={listadoRadios[14].logo}
+        borde={listadoRadios[14].borde}
+        banda={listadoRadios[14].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[15].nombre}
+        dial={listadoRadios[15].dial}
+        url={listadoRadios[15].url}
+        logo={listadoRadios[15].logo}
+        borde={listadoRadios[15].borde}
+        banda={listadoRadios[15].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[16].nombre}
+        dial={listadoRadios[16].dial}
+        url={listadoRadios[16].url}
+        logo={listadoRadios[16].logo}
+        borde={listadoRadios[16].borde}
+        banda={listadoRadios[16].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[17].nombre}
+        dial={listadoRadios[17].dial}
+        url={listadoRadios[17].url}
+        logo={listadoRadios[17].logo}
+        borde={listadoRadios[17].borde}
+        banda={listadoRadios[17].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[18].nombre}
+        dial={listadoRadios[18].dial}
+        url={listadoRadios[18].url}
+        logo={listadoRadios[18].logo}
+        borde={listadoRadios[18].borde}
+        banda={listadoRadios[18].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[19].nombre}
+        dial={listadoRadios[19].dial}
+        url={listadoRadios[19].url}
+        logo={listadoRadios[19].logo}
+        borde={listadoRadios[19].borde}
+        banda={listadoRadios[19].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[20].nombre}
+        dial={listadoRadios[20].dial}
+        url={listadoRadios[20].url}
+        logo={listadoRadios[20].logo}
+        borde={listadoRadios[20].borde}
+        banda={listadoRadios[20].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[21].nombre}
+        dial={listadoRadios[21].dial}
+        url={listadoRadios[21].url}
+        logo={listadoRadios[21].logo}
+        borde={listadoRadios[21].borde}
+        banda={listadoRadios[21].banda}
+      />
+      <RadioCardSm
+        nombre={listadoRadios[22].nombre}
+        dial={listadoRadios[22].dial}
+        url={listadoRadios[22].url}
+        logo={listadoRadios[22].logo}
+        borde={listadoRadios[22].borde}
+        banda={listadoRadios[22].banda}
       />
       <RadioCardSm
         nombre={listadoRadios[23].nombre}
