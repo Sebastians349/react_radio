@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 import {
   Button,
+  Link,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  Link,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
 const HeaderMenu = () => {
   return (
@@ -20,7 +20,7 @@ const HeaderMenu = () => {
         </MenuItem>
 
         <MenuItem>
-          <Link href="#">Comentarios</Link>
+          <Link>Comentarios</Link>
         </MenuItem>
 
         <MenuItem>

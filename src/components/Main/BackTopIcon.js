@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tooltip, Button } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import { FaArrowCircleUp } from 'react-icons/fa';
 
 const BackTopIcon = () => {
@@ -36,10 +36,14 @@ const BackTopIcon = () => {
       as={FaArrowCircleUp}
       onClick={scrollToTop}
       style={{ display: visible ? 'inline' : 'none' }}
+      _hover={{
+        backgroundColor: 'primary.300',
+        color: 'blue.200',
+      }}
       borderRadius="full"
       bg="transparent"
       color="green.500"
-    ></Button>
+    />
   );
 };
 export default BackTopIcon;
